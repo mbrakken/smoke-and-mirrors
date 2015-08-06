@@ -837,7 +837,14 @@ export default Component.extend({
    */
   _prepareComponent: function() {
 
-    this.set('_children', {});
+    var _children = {};
+    var content = this.get('content');
+    var key = this.keyForId;
+    for (var i = 0; i < content.length; i++) {
+      _children[content[i][key]] = content[i];
+    }
+
+    this.set('_children', _children);
 
     var prependFn = this.__performViewPrepention.bind(this);
     this.set('__performViewPrepention', prependFn);
