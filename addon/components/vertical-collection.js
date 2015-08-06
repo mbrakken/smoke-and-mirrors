@@ -838,11 +838,11 @@ export default Component.extend({
   _prepareComponent: function() {
 
     var _children = {};
-    var content = this.get('content');
-    var key = this.keyForId;
-    for (var i = 0; i < content.length; i++) {
-      _children[content[i][key]] = content[i];
-    }
+    // var content = this.get('content');
+    // var key = this.keyForId;
+    // for (var i = 0; i < content.length; i++) {
+    //   _children[content[i][key]] = content[i];
+    // }
 
     this.set('_children', _children);
 
