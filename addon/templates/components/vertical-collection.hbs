@@ -8,8 +8,10 @@
     collection=this
     as |wrapper|
   }}
-    {{#if shouldRenderList}}
+    {{#if shouldRender}}
+      shouldRender
       {{#if wrapper.contentInserted}}
+        contentInserted
         {{yield item}}
       {{/if}}
     {{/if}}
